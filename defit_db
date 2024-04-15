@@ -1,0 +1,12 @@
+CREATE DATABASE fridgedatabase;
+CREATE TABLE User (
+    ID int NOT NULL AUTO_INCREMENNT,
+    FullName varchar(255) NOT NULL,
+    Password varchar(255),
+    PhoneNumber varchar(255),
+    EmailAdress varchar(255),
+   CONSTRAINT UC_User UNIQUE (ID,Password)
+   PRIMARY KEY (ID)
+);
+CREATE UNIQUE INDEX index_name
+ON User (Password, EmailAdress);
